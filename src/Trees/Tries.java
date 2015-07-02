@@ -42,7 +42,7 @@ public class Tries {
 		
 		for(int i=0; i<word.length();i++)
 		{
-			int index = word.charAt(0) - 'a';			
+			int index = word.charAt(i) - 'a';			
 			if(temp.children[index] == null)
 			{
 				temp.children[index] = new TrieNode(word.charAt(i));
