@@ -1,9 +1,12 @@
 import java.util.ArrayList;
 
 import Strings.NestedParenthesis;
+import Trees.Tries;
+import Trees.TriesHashMap;
 import Arrays.Duplicates;
 import Arrays.Factors;
 import Arrays.FindSmallestKNumbers;
+import Arrays.Numbers;
 import Arrays.Pow;
 import Arrays.Primes;
 import Arrays.SpiralMatrix;
@@ -16,10 +19,28 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Factors f = new Factors();
+		Numbers n = new Numbers();
+		System.out.println(n.isNumber("-$100,00"));
+		System.out.println(n.isNumber("-201.56"));
+		System.out.println(n.isNumber("-,1"));
+		
+		/*Tries trie = new Tries();
+		TriesHashMap t = new TriesHashMap();
+		
+		trie.insert("dog");
+		t.insert("cat");
+		
+		System.out.println(trie.getAllWords());
+		System.out.println(t.getAllWords());
+		
+		System.out.println(trie.search("cat"));
+		System.out.println(t.search("cat"));*/
+		
+		
+		/*Factors f = new Factors();
 		f.factors(30);
 		
-		/*int[] arr = new int[] {-2, 0, 1, 2, 5, 8, 11};
+		int[] arr = new int[] {-2, 0, 1, 2, 5, 8, 11};
 		
 		TwoSum t = new TwoSum();
 		int[] res = t.twoSum(arr, 9);

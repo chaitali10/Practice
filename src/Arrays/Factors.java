@@ -9,7 +9,7 @@ public class Factors {
 	// then their product would be greater than n
 	public static void factors(long n)
 	{
-		int sqRoot = (int) Math.sqrt(n);
+		long sqRoot = (long) Math.sqrt(n);
 		
 		for(int i=1; i<= sqRoot; i++)
 		{

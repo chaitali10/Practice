@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Tries {
 
-	public class TrieNode
+	class TrieNode
 	{
 		Character c;
 		boolean isWord;
@@ -47,6 +47,8 @@ public class Tries {
 			{
 				temp.children[index] = new TrieNode(word.charAt(i));
 			}
+			
+			temp.c = word.charAt(i);
 			temp = temp.children[index];
 		}
 		
@@ -60,7 +62,6 @@ public class Tries {
 			throw new IllegalArgumentException("Input string is null or empty");		
 		}
 		
-		List<String> words = new ArrayList<String>();
 		TrieNode temp = root;
 		
 		for(int i=0; i < word.length(); i++)
@@ -74,16 +75,20 @@ public class Tries {
 			}
 		}
 		
-		return true;
+		if(temp != null && temp.isWord)
+		{
+			return true;
+		}
+		
+		return false;
 	}
 	
 	public List<String> getAllWords()
 	{
 		return getAllWords("", root);
-	}
+	}	
 	
-	
-	public List<String> getAllWords(String s, TrieNode root)
+	private List<String> getAllWords(String s, TrieNode root)
 	{
 		List<String> words = new ArrayList<String>();
 		
