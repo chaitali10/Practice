@@ -31,7 +31,7 @@ public class PrintTrees {
 		}		
 	}
 	
-	// Print tree nodes with new lines at each level
+	// Print tree nodes on a new line for each level
 	public void printLevelByLevel(Node root)
 	{
 		if(root == null)
