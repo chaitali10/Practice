@@ -10,6 +10,7 @@ import Arrays.Numbers;
 import Arrays.Pow;
 import Arrays.Primes;
 import Arrays.SpiralMatrix;
+import Arrays.Triangles;
 import Arrays.TwoSum;
 import Arrays.UniqueElements;
 import DP.MaxSum;
@@ -18,11 +19,6 @@ import DP.MaxSum;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Numbers n = new Numbers();
-		System.out.println(n.isNumber("-$100,00"));
-		System.out.println(n.isNumber("-201.56"));
-		System.out.println(n.isNumber("-,1"));
 		
 		/*Tries trie = new Tries();
 		TriesHashMap t = new TriesHashMap();
