@@ -21,6 +21,7 @@ import java.util.Arrays;
  * - empty array if there are no such segments
  */
 
+// TODO: consider arithematic overflow
 public class Triangles {
 
 	public int[] getTriangleSides(int[] segments) 

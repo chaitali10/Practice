@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 import Strings.NestedParenthesis;
+import Trees.Node;
+import Trees.PrintTrees;
 import Trees.Tries;
 import Trees.TriesHashMap;
 import Arrays.Duplicates;
@@ -19,6 +21,14 @@ import DP.MaxSum;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		Node n = new Node(10);
+		n.left = new Node(7);
+		n.right = new Node(12);
+		
+		PrintTrees p = new PrintTrees();
+		p.printLevelByLevel(n);
+		
 		
 		/*Tries trie = new Tries();
 		TriesHashMap t = new TriesHashMap();
