@@ -11,6 +11,7 @@ import Arrays.FindSmallestKNumbers;
 import Arrays.Numbers;
 import Arrays.Pow;
 import Arrays.Primes;
+import Arrays.RotatedArray;
 import Arrays.SpiralMatrix;
 import Arrays.Triangles;
 import Arrays.TwoSum;
@@ -22,7 +23,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Node n = new Node(10);
+		int[] arr = new int[] {15, 16, 19, 20, 25, 1, 3, 5, 14 };
+		
+		RotatedArray r = new RotatedArray();
+		System.out.println(r.findElement(arr, 16));
+		
+		
+		/*Node n = new Node(10);
 		n.left = new Node(7);
 		n.right = new Node(12);
 		
