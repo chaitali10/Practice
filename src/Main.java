@@ -21,6 +21,7 @@ import Arrays.SpiralMatrix;
 import Arrays.Triangles;
 import Arrays.TwoSum;
 import Arrays.UniqueElements;
+import Backtracking.SubsetSum;
 import Recursion.IntegerPermutations;
 import Recursion.KSum;
 import Recursion.StringPermutations;
@@ -28,7 +29,6 @@ import Recursion.perm;
 import DP.LCS;
 import DP.MaxDrop;
 import DP.MaxSum;
-import DP.SubsetSum;
 
 
 public class Main {
@@ -36,9 +36,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 		int[] arr = new int[] { 11, 2, 8, 10, 9  };
-		SubsetSum s = new SubsetSum();
+		//SubsetSum s = new SubsetSum();
 		//s.subSets(arr, 0, 19, 0, new ArrayList<Integer>());
-		s.subSets(arr, 19, 0, new ArrayList<Integer>());
+		//s.subSets(arr, 19, 0, new ArrayList<Integer>());
 		
 		
 		//int[] arr = new int[] { 11, -5, 9, 6, 40  };
