@@ -16,4 +16,20 @@ public class MaxSum {
 		
 		return maxSum;
 	}
+	
+	public static int maxSum2(int[] arr)
+	{
+		if(arr == null || arr.length == 0)
+			throw new IllegalArgumentException("Input incorrect");
+		
+		int maxSum = arr[0], currMaxSum = arr[0];
+		
+		for(int i=0; i<arr.length; i++)
+		{
+			currMaxSum = Math.max(currMaxSum, currMaxSum + arr[i]);
+			maxSum = Math.max(maxSum, currMaxSum);
+		}
+		
+		return maxSum;
+	}
 }

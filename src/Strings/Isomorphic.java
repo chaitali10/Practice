@@ -10,10 +10,10 @@ public class Isomorphic {
 			throw new IllegalArgumentException("Strings are null");
 		
 		if(s1.length() != s2.length())
-			return false;
+			throw new IllegalArgumentException("Strings are not of same length");
 		
 		if(s1.length() == 0)
-			return false;
+			throw new IllegalArgumentException("Either of both strings are of length 0");
 		
 		if(s1.length() == 1)
 			return true;

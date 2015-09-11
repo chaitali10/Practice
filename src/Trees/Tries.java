@@ -7,7 +7,7 @@ public class Tries {
 
 	class TrieNode
 	{
-		Character c;
+		char c;
 		boolean isWord;
 		TrieNode[] children;
 		
@@ -48,7 +48,6 @@ public class Tries {
 				temp.children[index] = new TrieNode(word.charAt(i));
 			}
 			
-			temp.c = word.charAt(i);
 			temp = temp.children[index];
 		}
 		

@@ -1,5 +1,12 @@
 package Arrays;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
 public class Duplicates {
 
 	/*
@@ -27,5 +34,73 @@ public class Duplicates {
 				System.out.println(Math.abs(arr[i]));
 			}
 		}
+	}
+	
+	// Remove duplicates from an array
+	public int[] removeDuplicates(int[] arr)
+	{
+		if(arr == null)
+		{
+			throw new IllegalArgumentException("Invalid input");
+		}
+			
+		int current = 0, next = 1;
+
+		for(int i=0; i<arr.length; i++)
+		{
+			if(arr[current] == arr[next])
+			{
+				next++;
+			}
+			else
+			{
+				current++;			
+				if(current != next)
+				{
+					arr[current] = arr[next];
+				}
+				next++;
+			}
+		}
+
+		int[] newArr = Arrays.copyOf(arr, current + 1);
+		return newArr;
+	}
+	
+	
+	//// Remove duplicates in 2 arrays
+	public void findUniqueElements(int[] A, int[] B)
+	{
+		if(A == null && B == null)
+			return;
+
+		HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
+		hashMap = getUniqueElements(A, hashMap);
+		hashMap = getUniqueElements(B, hashMap);
+
+		Set<Map.Entry<Integer, Integer>> set = hashMap.entrySet();
+		for(Entry e : set)
+		{
+			if((int)e.getValue() == 1)
+			{
+				System.out.println(e.getKey());
+			}
+		}
+	}
+
+	public HashMap<Integer, Integer> getUniqueElements(int[] arr, HashMap<Integer, Integer> hashMap)
+	{
+		for(int i=0; i < arr.length; i++)
+		{
+			int temp = 0;
+			if(hashMap.containsKey(arr[i]))
+			{
+				temp = hashMap.get(arr[i]);
+			}
+			
+			hashMap.put(arr[i], temp + 1);
+		}
+		
+		return hashMap;	
 	}
 }
